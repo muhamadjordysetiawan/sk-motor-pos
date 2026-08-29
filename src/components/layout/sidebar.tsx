@@ -49,7 +49,7 @@ const NAV_ITEMS: NavItem[] = [
     href: "/owner/products",
     label: "Master Produk",
     icon: Package,
-    roles: [ROLES.OWNER],
+    roles: [ROLES.OWNER, ROLES.CASHIER],
   },
   {
     href: "/owner/staff",

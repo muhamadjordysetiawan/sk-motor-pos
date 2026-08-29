@@ -13,3 +13,67 @@
  GET /owner/reports 200 in 1256ms (next.js: 39ms, proxy.ts: 276ms, application-code: 942ms)
  GET /owner/products 200 in 993ms (next.js: 46ms, proxy.ts: 222ms, application-code: 726ms)
  GET /owner/staff 200 in 336ms (next.js: 21ms, proxy.ts: 153ms, application-code: 161ms)
+ GET /owner/settings 200 in 491ms (next.js: 24ms, proxy.ts: 446ms, application-code: 21ms)
+ GET /login 200 in 267ms (next.js: 19ms, proxy.ts: 157ms, application-code: 91ms)
+ GET /login?email=owner%40skmotor.com&password=28Desember2004 200 in 36ms (next.js: 3ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /owner 200 in 1040ms (next.js: 7ms, proxy.ts: 191ms, application-code: 842ms)
+⨯ ./src/app/(dashboard)/owner/products/page.tsx:3:1
+Error: Module not found: Can't resolve '@/lib/auth'
+  [90m1 |[0m [36mimport[0m { fetchProducts, fetchCategories } [36mfrom[0m [32m"@/app/actions/products"[0m;
+  [90m2 |[0m [36mimport[0m { [33mProductsClient[0m } [36mfrom[0m [32m"./products-client"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getCurrentUser } [36mfrom[0m [32m"@/lib/auth"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { redirect } [36mfrom[0m [32m"next/navigation"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mconst[0m metadata = { title: [32m"Manajemen Produk"[0m };
+
+Import map: aliased to relative './src/lib/auth' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(dashboard)/owner/products/page.tsx:3:1
+Error: Module not found: Can't resolve '@/lib/auth'
+  [90m1 |[0m [36mimport[0m { fetchProducts, fetchCategories } [36mfrom[0m [32m"@/app/actions/products"[0m;
+  [90m2 |[0m [36mimport[0m { [33mProductsClient[0m } [36mfrom[0m [32m"./products-client"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getCurrentUser } [36mfrom[0m [32m"@/lib/auth"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { redirect } [36mfrom[0m [32m"next/navigation"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mconst[0m metadata = { title: [32m"Manajemen Produk"[0m };
+
+Import map: aliased to relative './src/lib/auth' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./src/app/(dashboard)/owner/products/page.tsx:3:1
+Error: Module not found: Can't resolve '@/lib/auth'
+  1 | import { fetchProducts, fetchCategories } from "@/app/actions/products";
+  2 | import { ProductsClient } from "./products-client";
+> 3 | import { getCurrentUser } from "@/lib/auth";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { redirect } from "next/navigation";
+  5 |
+  6 | export const metadata = { title: "Manajemen Produk" };
+
+Import map: aliased to relative './src/lib/auth' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/(dashboard)/owner/products/page.tsx:3:1
+Error: Module not found: Can't resolve '@/lib/auth'
+  1 | import { fetchProducts, fetchCategories } from "@/app/actions/products";
+  2 | import { ProductsClient } from "./products-client";
+> 3 | import { getCurrentUser } from "@/lib/auth";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { redirect } from "next/navigation";
+  5 |
+  6 | export const metadata = { title: "Manajemen Produk" };
+
+Import map: aliased to relative './src/lib/auth' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+ GET /owner 200 in 879ms (next.js: 4ms, proxy.ts: 233ms, application-code: 642ms)
+ GET /owner 200 in 872ms (next.js: 10ms, proxy.ts: 220ms, application-code: 642ms)
