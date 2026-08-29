@@ -192,3 +192,463 @@ Import trace:
   Server Component:
     ./src/app/(dashboard)/cashier/pos-client.tsx
     ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+⨯ ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m662 |[0m               </button>
+  [90m663 |[0m             </div>
+[31m[1m>[0m [90m664 |[0m           )}
+  [90m    |[0m            [31m[1m^[0m
+  [90m665 |[0m           {vehicleResults.length > [35m0[0m && !cart.vehicle && (
+  [90m666 |[0m             <div className=[32m"mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...[0m
+  [90m667 |[0m               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx
+
+
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+ GET /cashier 500 in 737ms (next.js: 180ms, proxy.ts: 440ms, application-code: 117ms)
+[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx
+
+
+    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+ GET /owner 500 in 158ms (next.js: 5ms, proxy.ts: 145ms, application-code: 7ms)
+ GET /owner 500 in 165ms (next.js: 5ms, proxy.ts: 154ms, application-code: 6ms)
+[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx
+
+
+    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+ GET /owner 500 in 228ms (next.js: 4ms, proxy.ts: 218ms, application-code: 6ms)
+[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx
+
+
+    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+ GET /owner 500 in 158ms (next.js: 5ms, proxy.ts: 148ms, application-code: 6ms)
+[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx
+
+
+    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+ GET /owner 500 in 147ms (next.js: 5ms, proxy.ts: 135ms, application-code: 7ms)
+[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx
+
+
+    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+ GET /owner 500 in 152ms (next.js: 5ms, proxy.ts: 141ms, application-code: 7ms)
+[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx
+
+
+    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+ GET /owner 200 in 1191ms (next.js: 3ms, proxy.ts: 241ms, application-code: 947ms)
+ GET /cashier 200 in 1016ms (next.js: 12ms, proxy.ts: 226ms, application-code: 777ms)
+ POST /cashier 200 in 1328ms (next.js: 3ms, proxy.ts: 223ms, application-code: 1101ms)
+  └─ ƒ createVehicle({"brand":"Honda","color":"Putih","license_plate":"F 2004 jo","...":"4 items not stringified"}) in 667ms src/app/actions/vehicles.ts
+ GET /cashier/vehicles 200 in 253ms (next.js: 3ms, proxy.ts: 235ms, application-code: 15ms)
+ POST /cashier/vehicles 200 in 784ms (next.js: 3ms, proxy.ts: 141ms, application-code: 640ms)
+  └─ ƒ searchVehicle("") in 634ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 759ms (next.js: 3ms, proxy.ts: 139ms, application-code: 618ms)
+  └─ ƒ searchVehicle("") in 612ms src/app/actions/vehicles.ts
+ GET /owner/staff 200 in 404ms (next.js: 9ms, proxy.ts: 136ms, application-code: 259ms)
+ GET /cashier/vehicles 200 in 234ms (next.js: 3ms, proxy.ts: 215ms, application-code: 16ms)
+ POST /cashier/vehicles 200 in 784ms (next.js: 3ms, proxy.ts: 141ms, application-code: 641ms)
+  └─ ƒ searchVehicle("") in 634ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 770ms (next.js: 3ms, proxy.ts: 141ms, application-code: 625ms)
+  └─ ƒ searchVehicle("") in 620ms src/app/actions/vehicles.ts
+ GET /owner/settings 200 in 269ms (next.js: 10ms, proxy.ts: 240ms, application-code: 18ms)
+ GET /cashier 200 in 605ms (next.js: 3ms, proxy.ts: 151ms, application-code: 451ms)
+ GET /cashier 200 in 156ms (next.js: 3ms, proxy.ts: 149ms, application-code: 3ms)
+ GET /cashier 200 in 598ms (next.js: 2ms, proxy.ts: 144ms, application-code: 451ms)
+ GET /cashier 200 in 462ms (next.js: 9ms, proxy.ts: 422ms, application-code: 31ms)
+✓ Compiled in 130ms
+ GET /cashier 200 in 272ms (next.js: 10ms, proxy.ts: 229ms, application-code: 33ms)
+ GET /cashier 200 in 1082ms (next.js: 3ms, proxy.ts: 242ms, application-code: 838ms)
+ POST /cashier 200 in 1804ms (next.js: 7ms, proxy.ts: 220ms, application-code: 1577ms)
+  └─ ƒ submitTransaction({"amount_paid":540000,"cashier_id":"cc1b79aa-920c-453e-9b41-1895abcdd3d8","discount":0,"...":"6 items not stringified"}) in 1169ms src/app/actions/pos.ts
+ GET /cashier/vehicles 200 in 676ms (next.js: 4ms, proxy.ts: 655ms, application-code: 17ms)
+ POST /cashier/vehicles 200 in 844ms (next.js: 3ms, proxy.ts: 137ms, application-code: 703ms)
+  └─ ƒ searchVehicle("") in 698ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 766ms (next.js: 3ms, proxy.ts: 152ms, application-code: 611ms)
+  └─ ƒ searchVehicle("") in 605ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 411ms (next.js: 3ms, proxy.ts: 140ms, application-code: 269ms)
+  └─ ƒ fetchVehicleHistory("DSADA") in 264ms src/app/actions/vehicles.ts
+ GET /cashier 200 in 569ms (next.js: 3ms, proxy.ts: 139ms, application-code: 427ms)
+ GET /cashier/vehicles 200 in 156ms (next.js: 4ms, proxy.ts: 140ms, application-code: 13ms)
+ POST /cashier/vehicles 200 in 383ms (next.js: 2ms, proxy.ts: 142ms, application-code: 239ms)
+  └─ ƒ searchVehicle("") in 232ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 367ms (next.js: 3ms, proxy.ts: 137ms, application-code: 227ms)
+  └─ ƒ searchVehicle("") in 222ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 378ms (next.js: 2ms, proxy.ts: 141ms, application-code: 235ms)
+  └─ ƒ fetchVehicleHistory("F 2004 JO") in 230ms src/app/actions/vehicles.ts
+ GET /owner/staff 200 in 485ms (next.js: 3ms, proxy.ts: 218ms, application-code: 263ms)
+ GET /owner/reports 200 in 1018ms (next.js: 8ms, proxy.ts: 235ms, application-code: 775ms)
+ GET /owner/products 200 in 690ms (next.js: 11ms, proxy.ts: 247ms, application-code: 432ms)
+ GET /owner/staff 200 in 416ms (next.js: 4ms, proxy.ts: 222ms, application-code: 189ms)
+ GET /owner/reports 200 in 968ms (next.js: 2ms, proxy.ts: 151ms, application-code: 814ms)
+ GET /login 200 in 19ms (next.js: 4ms, proxy.ts: 3ms, application-code: 12ms)
+ GET /cashier 200 in 636ms (next.js: 4ms, proxy.ts: 221ms, application-code: 411ms)
+ GET /cashier/vehicles 200 in 152ms (next.js: 3ms, proxy.ts: 137ms, application-code: 13ms)
+ POST /cashier/vehicles 200 in 405ms (next.js: 2ms, proxy.ts: 153ms, application-code: 250ms)
+  └─ ƒ searchVehicle("") in 245ms src/app/actions/vehicles.ts
+ GET /cashier/inventory 404 in 167ms (next.js: 8ms, proxy.ts: 142ms, application-code: 18ms)
+ GET /cashier/inventory 404 in 171ms (next.js: 6ms, proxy.ts: 142ms, application-code: 24ms)
+ POST /cashier/vehicles 200 in 731ms (next.js: 3ms, proxy.ts: 137ms, application-code: 591ms)
+  └─ ƒ searchVehicle("") in 586ms src/app/actions/vehicles.ts
+ GET /login 200 in 19ms (next.js: 2ms, proxy.ts: 5ms, application-code: 12ms)
+ GET /owner 200 in 1187ms (next.js: 3ms, proxy.ts: 231ms, application-code: 953ms)
+ GET /owner/staff 200 in 498ms (next.js: 3ms, proxy.ts: 235ms, application-code: 260ms)
+✓ Compiled in 74ms
+ GET /owner/staff 200 in 502ms (next.js: 9ms, proxy.ts: 467ms, application-code: 26ms)

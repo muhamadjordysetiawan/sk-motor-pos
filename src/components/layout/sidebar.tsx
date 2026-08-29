@@ -32,18 +32,18 @@ type NavItem = {
 };
 
 const NAV_ITEMS: NavItem[] = [
-  // Owner-only
+  // Semua akses
   {
     href: "/owner",
     label: "Dashboard",
     icon: LayoutDashboard,
-    roles: [ROLES.OWNER],
+    roles: [ROLES.OWNER, ROLES.CASHIER],
   },
   {
     href: "/owner/reports",
     label: "Laporan Keuangan",
     icon: BarChart3,
-    roles: [ROLES.OWNER],
+    roles: [ROLES.OWNER, ROLES.CASHIER],
   },
   {
     href: "/owner/products",
@@ -55,13 +55,13 @@ const NAV_ITEMS: NavItem[] = [
     href: "/owner/staff",
     label: "Staff & Mekanik",
     icon: Users,
-    roles: [ROLES.OWNER],
+    roles: [ROLES.OWNER], // HANYA OWNER
   },
   {
     href: "/owner/settings",
     label: "Pengaturan",
     icon: Settings,
-    roles: [ROLES.OWNER],
+    roles: [ROLES.OWNER, ROLES.CASHIER],
   },
   // Cashier (also visible to owner)
   {

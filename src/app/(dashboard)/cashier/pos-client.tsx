@@ -465,23 +465,6 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
   }
 
   function handlePayClick() {
-    // Validasi Kendaraan & Staff untuk Jasa
-    const serviceItems = cart.items.filter(i => i.type === "service" && (i.business_unit === "repair" || i.business_unit === "wash"));
-    
-    if (serviceItems.length > 0) {
-      if (!cart.vehicle) {
-        toast.error("Pilih Kendaraan dulu sebelum membayar layanan bengkel / steam!");
-        return;
-      }
-      
-      for (const item of serviceItems) {
-        if (!item.assigned_staff_id) {
-          toast.error(`Wajib memilih mekanik / petugas untuk layanan: ${item.name}`);
-          return;
-        }
-      }
-    }
-
     setCheckoutOpen(true);
   }
 
@@ -661,6 +644,7 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
                 {vehicleLoading ? "…" : "Cari"}
               </button>
             </div>
+          </div>
           )}
           {vehicleResults.length > 0 && !cart.vehicle && (
             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden">
@@ -851,15 +835,31 @@ function CartItemRow({ item, staff, onQtyChange, onRemove, onDiscountChange, onA
 
           {/* Assign staff */}
           {item.type === "service" && relevantStaff.length > 0 && (
-            <button onClick={() => setShowStaff(!showStaff)}
-              className={`text-xs px-2 py-0.5 rounded-full border transition-colors flex items-center gap-1 ${
-                item.assigned_staff_name
-                  ? "border-green-800/50 text-green-300 bg-green-900/20"
-                  : "border-gray-700 text-gray-500 hover:border-gray-600"
-              }`}>
-              <UserCheck className="w-2.5 h-2.5" />
-              {item.assigned_staff_name ?? "Assign"}
-            </button>
+            <div className="flex items-center">
+              <UserCheck className={`w-3 h-3 mr-1 ${item.assigned_staff_id ? 'text-green-400' : 'text-gray-500'}`} />
+              <select
+                value={item.assigned_staff_id || ""}
+                onChange={(e) => {
+                  const staffId = e.target.value;
+                  if (!staffId) {
+                    onAssignStaff(null, null);
+                  } else {
+                    const selected = relevantStaff.find(s => s.id === staffId);
+                    if (selected) onAssignStaff(selected.id, selected.full_name);
+                  }
+                }}
+                className={`text-xs bg-transparent focus:outline-none appearance-none cursor-pointer border-b border-dashed ${
+                  item.assigned_staff_id ? 'text-green-300 border-green-800/50' : 'text-gray-500 border-gray-600'
+                }`}
+              >
+                <option value="" className="bg-gray-900 text-gray-500">— Pilih Karyawan</option>
+                {relevantStaff.map((s) => (
+                  <option key={s.id} value={s.id} className="bg-gray-900 text-white">
+                    {s.full_name}
+                  </option>
+                ))}
+              </select>
+            </div>
           )}
         </div>
 
@@ -877,23 +877,6 @@ function CartItemRow({ item, staff, onQtyChange, onRemove, onDiscountChange, onA
             autoFocus
             className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-1.5 text-white text-xs focus:outline-none focus:border-blue-600"
           />
-        </div>
-      )}
-
-      {/* Staff dropdown */}
-      {showStaff && (
-        <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden">
-          <button onClick={() => { onAssignStaff(null, null); setShowStaff(false); }}
-            className="w-full px-3 py-2 text-xs text-gray-400 hover:bg-gray-700 text-left border-b border-gray-700">
-            — Tidak ada
-          </button>
-          {relevantStaff.map((s) => (
-            <button key={s.id}
-              onClick={() => { onAssignStaff(s.id, s.full_name); setShowStaff(false); }}
-              className="w-full px-3 py-2 text-xs text-white hover:bg-gray-700 text-left border-b border-gray-700 last:border-0 flex items-center gap-2">
-              <UserCheck className="w-3 h-3 text-green-400" />{s.full_name}
-            </button>
-          ))}
         </div>
       )}
     </div>
