@@ -90,6 +90,14 @@ function ReceiptModal({ tx, onClose }: { tx: any; onClose: () => void }) {
             <div className="border-t border-dashed border-gray-300 py-2 mb-2">
               <div className="font-bold">{vehicle.license_plate}</div>
               <div className="text-gray-600">{vehicle.owner_name}</div>
+              {vehicle.vehicle_type && (
+                <div className="text-gray-500 text-[10px] uppercase">
+                  {vehicle.vehicle_type} 
+                  {vehicle.brand ? ` - ${vehicle.brand}` : ""}
+                  {vehicle.model ? ` ${vehicle.model}` : ""}
+                  {vehicle.color ? ` (${vehicle.color})` : ""}
+                </div>
+              )}
             </div>
           )}
 
@@ -356,6 +364,27 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
     }
   }
 
+  function handlePayClick() {
+    // Validasi Kendaraan & Staff untuk Jasa
+    const serviceItems = cart.items.filter(i => i.type === "service" && (i.business_unit === "repair" || i.business_unit === "wash"));
+    
+    if (serviceItems.length > 0) {
+      if (!cart.vehicle) {
+        toast.error("Pilih Kendaraan dulu sebelum membayar layanan bengkel / steam!");
+        return;
+      }
+      
+      for (const item of serviceItems) {
+        if (!item.assigned_staff_id) {
+          toast.error(`Wajib memilih mekanik / petugas untuk layanan: ${item.name}`);
+          return;
+        }
+      }
+    }
+
+    setCheckoutOpen(true);
+  }
+
   function handleConfirmCheckout(method: string, amountPaid: number, globalDiscount: number) {
     cart.setGlobalDiscount(globalDiscount);
 
@@ -609,7 +638,7 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
                 className="p-2.5 rounded-xl border border-gray-700 text-gray-400 hover:text-red-400 hover:border-red-900/50 transition-colors">
                 <Trash2 className="w-4 h-4" />
               </button>
-              <button onClick={() => setCheckoutOpen(true)}
+              <button onClick={handlePayClick}
                 className="flex-1 py-2.5 bg-green-600 hover:bg-green-700 rounded-xl text-white font-bold text-sm transition-colors flex items-center justify-center gap-2">
                 <ShoppingCart className="w-4 h-4" /> Bayar
               </button>

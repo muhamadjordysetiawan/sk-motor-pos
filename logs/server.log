@@ -77,3 +77,94 @@ Import map: aliased to relative './src/lib/auth' inside of [project]/
 https://nextjs.org/docs/messages/module-not-found 
  GET /owner 200 in 879ms (next.js: 4ms, proxy.ts: 233ms, application-code: 642ms)
  GET /owner 200 in 872ms (next.js: 10ms, proxy.ts: 220ms, application-code: 642ms)
+ GET /cashier/vehicles 200 in 267ms (next.js: 21ms, proxy.ts: 229ms, application-code: 17ms)
+ POST /cashier/vehicles 200 in 792ms (next.js: 3ms, proxy.ts: 143ms, application-code: 646ms)
+  └─ ƒ searchVehicle("") in 638ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 758ms (next.js: 2ms, proxy.ts: 145ms, application-code: 610ms)
+  └─ ƒ searchVehicle("") in 604ms src/app/actions/vehicles.ts
+ GET /owner 200 in 813ms (next.js: 4ms, proxy.ts: 152ms, application-code: 657ms)
+ GET /login 200 in 21ms (next.js: 3ms, proxy.ts: 5ms, application-code: 13ms)
+ GET /cashier 200 in 732ms (next.js: 20ms, proxy.ts: 222ms, application-code: 489ms)
+ GET /cashier/inventory 404 in 258ms (next.js: 23ms, proxy.ts: 221ms, application-code: 14ms)
+ GET /cashier/inventory 404 in 175ms (next.js: 5ms, proxy.ts: 144ms, application-code: 26ms)
+ GET /cashier/vehicles 200 in 156ms (next.js: 3ms, proxy.ts: 141ms, application-code: 12ms)
+ GET /cashier 200 in 557ms (next.js: 3ms, proxy.ts: 139ms, application-code: 415ms)
+ GET /cashier/vehicles 200 in 159ms (next.js: 3ms, proxy.ts: 144ms, application-code: 12ms)
+ POST /cashier/vehicles 200 in 413ms (next.js: 2ms, proxy.ts: 148ms, application-code: 263ms)
+  └─ ƒ searchVehicle("") in 256ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 400ms (next.js: 4ms, proxy.ts: 146ms, application-code: 250ms)
+  └─ ƒ searchVehicle("") in 245ms src/app/actions/vehicles.ts
+ GET /cashier 200 in 533ms (next.js: 3ms, proxy.ts: 139ms, application-code: 391ms)
+ GET /cashier 200 in 1091ms (next.js: 2ms, proxy.ts: 239ms, application-code: 850ms)
+ GET /cashier 307 in 155ms (proxy.ts: 150ms)
+ GET /cashier 200 in 157ms (next.js: 3ms, proxy.ts: 150ms, application-code: 4ms)
+ GET /cashier 200 in 633ms (next.js: 2ms, proxy.ts: 150ms, application-code: 480ms)
+ GET /cashier 307 in 144ms (proxy.ts: 141ms)
+ GET /cashier 200 in 154ms (next.js: 3ms, proxy.ts: 146ms, application-code: 4ms)
+ GET /cashier 307 in 146ms (proxy.ts: 143ms)
+ GET /cashier 200 in 150ms (next.js: 3ms, proxy.ts: 143ms, application-code: 4ms)
+ GET /cashier/inventory 404 in 163ms (next.js: 6ms, proxy.ts: 145ms, application-code: 12ms)
+ GET /cashier/inventory 404 in 191ms (next.js: 6ms, proxy.ts: 154ms, application-code: 31ms)
+ GET /cashier/vehicles 200 in 155ms (next.js: 3ms, proxy.ts: 141ms, application-code: 11ms)
+ GET /cashier/vehicles 200 in 172ms (next.js: 3ms, proxy.ts: 153ms, application-code: 16ms)
+ GET /cashier/vehicles 200 in 161ms (next.js: 3ms, proxy.ts: 143ms, application-code: 15ms)
+ GET /cashier 307 in 149ms (proxy.ts: 146ms)
+ GET /cashier 200 in 943ms (next.js: 4ms, proxy.ts: 145ms, application-code: 793ms)
+ GET /cashier 200 in 1050ms (next.js: 3ms, proxy.ts: 228ms, application-code: 820ms)
+ GET /cashier 307 in 145ms (proxy.ts: 142ms)
+ GET /cashier 200 in 153ms (next.js: 5ms, proxy.ts: 143ms, application-code: 5ms)
+ GET /cashier 200 in 579ms (next.js: 2ms, proxy.ts: 138ms, application-code: 439ms)
+ GET /cashier 307 in 155ms (proxy.ts: 151ms)
+ GET /cashier 200 in 152ms (next.js: 5ms, proxy.ts: 142ms, application-code: 5ms)
+ GET /login 200 in 21ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /cashier 200 in 702ms (next.js: 4ms, proxy.ts: 142ms, application-code: 557ms)
+ GET /cashier/vehicles 200 in 172ms (next.js: 3ms, proxy.ts: 158ms, application-code: 12ms)
+ POST /cashier/vehicles 200 in 394ms (next.js: 3ms, proxy.ts: 147ms, application-code: 245ms)
+  └─ ƒ searchVehicle("") in 239ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 756ms (next.js: 3ms, proxy.ts: 144ms, application-code: 609ms)
+  └─ ƒ searchVehicle("") in 603ms src/app/actions/vehicles.ts
+ GET /cashier/inventory 404 in 170ms (next.js: 5ms, proxy.ts: 138ms, application-code: 27ms)
+ GET /cashier/inventory 404 in 174ms (next.js: 5ms, proxy.ts: 147ms, application-code: 22ms)
+ GET /cashier 307 in 153ms (proxy.ts: 149ms)
+ GET /cashier 200 in 563ms (next.js: 3ms, proxy.ts: 147ms, application-code: 413ms)
+ GET /cashier 200 in 1272ms (next.js: 3ms, proxy.ts: 424ms, application-code: 845ms)
+ GET /cashier 307 in 139ms (proxy.ts: 136ms)
+ GET /cashier 200 in 153ms (next.js: 4ms, proxy.ts: 140ms, application-code: 9ms)
+ GET /cashier 200 in 1135ms (next.js: 3ms, proxy.ts: 228ms, application-code: 904ms)
+ GET /cashier 307 in 148ms (proxy.ts: 144ms)
+ GET /cashier 200 in 150ms (next.js: 2ms, proxy.ts: 143ms, application-code: 5ms)
+ POST /cashier 200 in 498ms (next.js: 4ms, proxy.ts: 221ms, application-code: 273ms)
+  └─ ƒ submitTransaction({"amount_paid":500000,"cashier_id":"dd43c46e-d096-4699-9bf0-010f21eac1a6","discount":0,"...":"6 items not stringified"}) in 267ms src/app/actions/pos.ts
+ POST /cashier 200 in 839ms (next.js: 10ms, proxy.ts: 212ms, application-code: 617ms)
+  └─ ƒ submitTransaction({"amount_paid":500000,"cashier_id":"dd43c46e-d096-4699-9bf0-010f21eac1a6","discount":0,"...":"6 items not stringified"}) in 611ms src/app/actions/pos.ts
+ GET /cashier 200 in 868ms (next.js: 3ms, proxy.ts: 391ms, application-code: 474ms)
+ POST /cashier 200 in 2.1s (next.js: 2ms, proxy.ts: 223ms, application-code: 1841ms)
+  └─ ƒ submitTransaction({"amount_paid":602000,"cashier_id":"dd43c46e-d096-4699-9bf0-010f21eac1a6","discount":0,"...":"6 items not stringified"}) in 1068ms src/app/actions/pos.ts
+ GET /cashier 307 in 156ms (proxy.ts: 152ms)
+ GET /cashier 200 in 146ms (next.js: 4ms, proxy.ts: 138ms, application-code: 4ms)
+ GET /cashier/vehicles 200 in 166ms (next.js: 3ms, proxy.ts: 151ms, application-code: 12ms)
+ POST /cashier/vehicles 200 in 412ms (next.js: 3ms, proxy.ts: 140ms, application-code: 268ms)
+  └─ ƒ searchVehicle("") in 262ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 767ms (next.js: 3ms, proxy.ts: 139ms, application-code: 624ms)
+  └─ ƒ searchVehicle("") in 620ms src/app/actions/vehicles.ts
+ GET /cashier 307 in 164ms (proxy.ts: 159ms)
+ GET /cashier 200 in 582ms (next.js: 3ms, proxy.ts: 139ms, application-code: 441ms)
+ GET /cashier 200 in 145ms (next.js: 4ms, proxy.ts: 137ms, application-code: 4ms)
+ GET /cashier 200 in 899ms (next.js: 3ms, proxy.ts: 140ms, application-code: 756ms)
+✓ Compiled in 91ms
+ GET /cashier 200 in 512ms (next.js: 12ms, proxy.ts: 460ms, application-code: 40ms)
+ GET /login 200 in 19ms (next.js: 3ms, proxy.ts: 3ms, application-code: 13ms)
+ GET /owner 200 in 873ms (next.js: 4ms, proxy.ts: 221ms, application-code: 647ms)
+✓ Compiled in 57ms
+ GET /owner 200 in 410ms (next.js: 2ms, proxy.ts: 148ms, application-code: 259ms)
+ GET /cashier 200 in 681ms (next.js: 74ms, proxy.ts: 192ms, application-code: 414ms)
+[browser] Uncaught ReferenceError: handlePayClick is not defined
+    at POSClient (src/app/(dashboard)/cashier/pos-client.tsx:620:32)
+    at CashierPOSPage (src\app\(dashboard)\cashier\page.tsx:17:5)
+  618 |                 <Trash2 className="w-4 h-4" />
+  619 |               </button>
+> 620 |               <button onClick={handlePayClick}
+      |                                ^
+  621 |                 className="flex-1 py-2.5 bg-green-600 hover:bg-green-700 rounded-xl text-white font-bold text-sm transition-colors flex items-center justify-center gap-2">
+  622 |                 <ShoppingCart className="w-4 h-4" /> Bayar
+  623 |               </button>
