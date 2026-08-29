@@ -123,7 +123,7 @@ export default function VehiclesClient() {
   }
 
   async function handleSearch(e?: React.FormEvent) {
-    if (e) e.preventDefault();
+    if (e && e.preventDefault) e.preventDefault();
     setLoading(true);
     setNotFound(false);
     setSelected(null);
@@ -281,7 +281,7 @@ export default function VehiclesClient() {
       <VehicleModal 
         open={modalOpen} 
         onClose={() => setModalOpen(false)} 
-        onRefresh={() => handleSearch(true)} 
+        onRefresh={() => fetchInitialData()} 
       />
     </div>
   );
