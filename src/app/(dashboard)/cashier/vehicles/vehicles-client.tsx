@@ -12,7 +12,7 @@ const VEHICLE_LABELS: Record<string, string> = {
   motor: "Motor", mobil: "Mobil", truk: "Truk", lainnya: "Lainnya",
 };
 
-function VehicleModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+function VehicleModal({ open, onClose, onRefresh }: { open: boolean; onClose: () => void; onRefresh: () => void }) {
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState("");
 
@@ -23,14 +23,23 @@ function VehicleModal({ open, onClose }: { open: boolean; onClose: () => void })
     const fd = new FormData(e.currentTarget);
     const data = {
       license_plate: fd.get("license_plate") as string,
+      vehicle_type: fd.get("vehicle_type") as any,
       owner_name: fd.get("owner_name") as string,
       phone: fd.get("phone") as string,
-      vehicle_type: fd.get("vehicle_type") as any,
       brand: fd.get("brand") as string,
       model: fd.get("model") as string,
       color: fd.get("color") as string,
     };
-    onSave(data);
+    
+    startTransition(async () => {
+      const res = await createVehicle(data);
+      if (res?.error) {
+        setError(res.error);
+      } else {
+        onRefresh();
+        onClose();
+      }
+    });
   }
 
   return (
@@ -269,7 +278,11 @@ export default function VehiclesClient() {
         </div>
       )}
 
-      <VehicleModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      <VehicleModal 
+        open={modalOpen} 
+        onClose={() => setModalOpen(false)} 
+        onRefresh={() => handleSearch(true)} 
+      />
     </div>
   );
 }
