@@ -159,6 +159,103 @@ function ReceiptModal({ tx, onClose }: { tx: any; onClose: () => void }) {
   );
 }
 
+// ── Add Vehicle Modal ─────────────────────────────────────────
+function AddVehicleModal({
+  open, onClose, onSelect
+}: {
+  open: boolean;
+  onClose: () => void;
+  onSelect: (vehicle: any) => void;
+}) {
+  const [isPending, startTransition] = useTransition();
+
+  if (!open) return null;
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const data = {
+      license_plate: fd.get("license_plate") as string,
+      vehicle_type: fd.get("vehicle_type") as any,
+      owner_name: fd.get("owner_name") as string,
+      phone: fd.get("phone") as string,
+      brand: fd.get("brand") as string,
+      model: fd.get("model") as string,
+      color: fd.get("color") as string,
+    };
+    
+    startTransition(async () => {
+      // Create vehicle dan dapatkan return record dari database
+      const { createVehicle } = await import("@/app/actions/vehicles");
+      const res = await createVehicle(data);
+      if (res?.error) {
+        toast.error(res.error);
+      } else if (res?.data) {
+        toast.success("Kendaraan berhasil didaftarkan");
+        onSelect(res.data);
+        onClose();
+      }
+    });
+  }
+
+  return (
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+      <div className="bg-gray-900 border border-gray-800 rounded-2xl w-full max-w-md mx-4 max-h-[90vh] overflow-y-auto">
+        <div className="flex items-center justify-between p-6 border-b border-gray-800">
+          <h2 className="text-white font-semibold">Daftarkan Kendaraan</h2>
+          <button onClick={onClose} className="text-gray-400 hover:text-white"><X className="w-5 h-5" /></button>
+        </div>
+        <form onSubmit={handleSubmit} className="p-6 space-y-4">
+          <div>
+            <label className="text-gray-400 text-xs mb-1 block">Nomor Polisi *</label>
+            <input name="license_plate" required placeholder="AB 1234 CD"
+              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm uppercase placeholder-gray-600 focus:outline-none focus:border-blue-600" />
+          </div>
+          <div>
+            <label className="text-gray-400 text-xs mb-1 block">Jenis Kendaraan *</label>
+            <select name="vehicle_type" required
+              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-blue-600">
+              <option value="motor">Motor</option>
+              <option value="mobil">Mobil</option>
+              <option value="truk">Truk</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
+          <div>
+            <label className="text-gray-400 text-xs mb-1 block">Nama Pemilik *</label>
+            <input name="owner_name" required placeholder="Nama pelanggan"
+              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-blue-600" />
+          </div>
+          <div>
+            <label className="text-gray-400 text-xs mb-1 block">No. HP (Opsional)</label>
+            <input name="phone" placeholder="08xxxxxxxxxx"
+              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-blue-600" />
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            {["brand","model","color"].map((f) => (
+              <div key={f}>
+                <label className="text-gray-400 text-xs mb-1 block capitalize">
+                  {f === "brand" ? "Merek" : f === "model" ? "Model" : "Warna"}
+                </label>
+                <input name={f} placeholder={f === "brand" ? "Honda" : f === "model" ? "Beat" : "Putih"}
+                  className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-blue-600" />
+              </div>
+            ))}
+          </div>
+          <div className="flex gap-3 pt-2">
+            <button type="button" onClick={onClose}
+              className="flex-1 py-2.5 border border-gray-700 rounded-lg text-gray-300 text-sm">Batal</button>
+            <button type="submit" disabled={isPending}
+              className="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 rounded-lg text-white text-sm font-medium">
+              {isPending ? "Menyimpan…" : "Daftarkan"}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
 // ── Checkout Modal ────────────────────────────────────────────
 function CheckoutModal({
   open, onClose, total, subtotal, discount, onConfirm, isPending,
@@ -301,6 +398,9 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
 
   // Staff assign modal
   const [staffModal, setStaffModal] = useState<{ itemId: string; name: string } | null>(null);
+
+  // Add vehicle modal
+  const [addVehicleOpen, setAddVehicleOpen] = useState(false);
 
   // Filter produk
   const filteredProducts = products.filter((p) => {
@@ -538,8 +638,15 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
               </button>
             </div>
           ) : (
-            <div className="flex gap-2">
-              <div className="relative flex-1">
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-gray-400">Pilih Kendaraan</span>
+                <button onClick={() => setAddVehicleOpen(true)} className="text-blue-400 text-xs hover:underline flex items-center gap-1">
+                  <Plus className="w-3 h-3" /> Baru
+                </button>
+              </div>
+              <div className="flex gap-2">
+                <div className="relative flex-1">
                 <Car className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-500" />
                 <input
                   value={plateSearch}
@@ -656,6 +763,17 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
         discount={cart.discount}
         onConfirm={handleConfirmCheckout}
         isPending={isPending}
+      />
+
+      {/* Add Vehicle Modal */}
+      <AddVehicleModal
+        open={addVehicleOpen}
+        onClose={() => setAddVehicleOpen(false)}
+        onSelect={(vehicle) => {
+          cart.setVehicle(vehicle);
+          setPlateSearch("");
+          setVehicleResults([]);
+        }}
       />
 
       {/* Receipt Modal */}

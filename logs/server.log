@@ -168,3 +168,27 @@ https://nextjs.org/docs/messages/module-not-found
   621 |                 className="flex-1 py-2.5 bg-green-600 hover:bg-green-700 rounded-xl text-white font-bold text-sm transition-colors flex items-center justify-center gap-2">
   622 |                 <ShoppingCart className="w-4 h-4" /> Bayar
   623 |               </button>
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 63ms
+ GET /owner 200 in 572ms (next.js: 3ms, proxy.ts: 218ms, application-code: 351ms)
+ GET /owner 200 in 1412ms (next.js: 3ms, proxy.ts: 491ms, application-code: 918ms)
+ GET /cashier 200 in 541ms (next.js: 7ms, proxy.ts: 137ms, application-code: 396ms)
+✓ Compiled in 157ms
+ GET /cashier 200 in 524ms (next.js: 12ms, proxy.ts: 479ms, application-code: 33ms)
+ GET /cashier 200 in 272ms (next.js: 10ms, proxy.ts: 229ms, application-code: 33ms)
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  662 |               </button>
+  663 |             </div>
+> 664 |           )}
+      |            ^
+  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
+  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
+  667 |               {vehicleResults.map((v) => {
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
