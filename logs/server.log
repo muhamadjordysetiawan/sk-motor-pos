@@ -9,3 +9,7 @@
 ✓ Ready in 395ms
 ✓ Running next.config.ts took 34ms
 
+ GET /owner 200 in 1593ms (next.js: 113ms, proxy.ts: 310ms, application-code: 1170ms)
+ GET /owner/reports 200 in 1256ms (next.js: 39ms, proxy.ts: 276ms, application-code: 942ms)
+ GET /owner/products 200 in 993ms (next.js: 46ms, proxy.ts: 222ms, application-code: 726ms)
+ GET /owner/staff 200 in 336ms (next.js: 21ms, proxy.ts: 153ms, application-code: 161ms)
