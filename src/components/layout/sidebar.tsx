@@ -71,17 +71,17 @@ const NAV_ITEMS: NavItem[] = [
     roles: [ROLES.OWNER, ROLES.CASHIER],
     badge: "POS",
   },
+  /* {
+    href: "/cashier/members",
+    label: "Database Member",
+    icon: Users,
+    roles: [ROLES.OWNER, ROLES.CASHIER],
+  }, */
   {
     href: "/cashier/vehicles",
     label: "Database Kendaraan",
     icon: Car,
     roles: [ROLES.OWNER, ROLES.CASHIER],
-  },
-  {
-    href: "/cashier/inventory",
-    label: "Stok Tersedia",
-    icon: Package,
-    roles: [ROLES.CASHIER],
   },
 ];
 
@@ -167,10 +167,12 @@ function Sidebar({ role, email, onClose }: SidebarProps) {
           const isActive =
             pathname === item.href || pathname.startsWith(item.href + "/");
           return (
-            <Link
+            <a
               key={item.href}
               href={item.href}
-              onClick={onClose}
+              onClick={(e) => {
+                if (onClose) onClose();
+              }}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors group ${
                 isActive
                   ? "bg-blue-600 text-white"
@@ -185,7 +187,7 @@ function Sidebar({ role, email, onClose }: SidebarProps) {
                 </span>
               )}
               {isActive && <ChevronRight className="w-3 h-3 ml-auto" />}
-            </Link>
+            </a>
           );
         })}
       </nav>

@@ -69,11 +69,12 @@ export async function fetchRevenueSummary(start_date: string, end_date: string) 
 
   if (error) throw new Error(error.message);
 
-  const summary = { repair: 0, wash: 0, cafe: 0, total: 0, count: 0 };
+  const summary = { repair: 0, wash: 0, cafe: 0, total: 0, count: 0, discount: 0 };
 
   (data ?? []).forEach((tx: any) => {
     summary.count++;
     summary.total += tx.total ?? 0;
+    summary.discount += tx.discount ?? 0;
     (tx.transaction_details ?? []).forEach((d: any) => {
       const unit = d.products_services?.business_unit;
       if (unit === "repair") summary.repair += d.subtotal ?? 0;

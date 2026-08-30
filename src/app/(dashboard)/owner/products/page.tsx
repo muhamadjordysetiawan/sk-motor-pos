@@ -9,7 +9,7 @@ export default async function ProductsPage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
-  if (!user || (user.user_metadata.role !== "owner" && user.user_metadata.role !== "cashier")) {
+  if (!user) {
     redirect("/login");
   }
 

@@ -66,7 +66,7 @@ export async function proxy(request: NextRequest) {
     }
 
     // Role-based path protection
-    if (pathname.startsWith("/owner") && role !== ROLES.OWNER) {
+    if (pathname.startsWith("/owner/staff") && role !== ROLES.OWNER) {
       const redirectUrl = request.nextUrl.clone();
       redirectUrl.pathname = ROUTES.CASHIER_POS;
       return NextResponse.redirect(redirectUrl);

@@ -4,11 +4,12 @@ import { useState, useTransition, useRef } from "react";
 import { useCartStore, CartItem } from "@/stores/cart-store";
 import { submitTransaction } from "@/app/actions/pos";
 import { searchVehicle } from "@/app/actions/vehicles";
+import { searchMember } from "@/app/actions/members";
 import { formatIDR } from "@/lib/constants";
 import {
-  Search, ShoppingCart, Trash2, Plus, Minus, X, Car, Bike, Truck,
-  Wrench, Droplets, Coffee, Package, CheckCircle2, Printer,
-  ChevronDown, UserCheck, AlertTriangle,
+  Search, Car, X, Plus, Minus, CheckCircle2,
+  Printer, ShoppingCart, UserCheck, Trash2, Users, CreditCard,
+  Wrench, Droplets, Coffee, Package, Bike, Truck, ChevronDown, AlertTriangle,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -25,6 +26,7 @@ const PAYMENT_METHODS = [
   { key: "transfer", label: "Transfer" },
   { key: "qris",     label: "QRIS" },
   { key: "piutang",  label: "Piutang" },
+  // { key: "loyalty",  label: "Poin" }, // COMING SOON
 ] as const;
 
 const VEHICLE_ICONS: Record<string, React.ElementType> = {
@@ -139,6 +141,14 @@ function ReceiptModal({ tx, onClose }: { tx: any; onClose: () => void }) {
             )}
           </div>
 
+          {tx.loyalty_members && (
+            <div className="text-center mt-3 pt-3 text-xs border-t border-dashed border-gray-300">
+              <div className="font-bold text-gray-800">** VOUCHER LOYALTY **</div>
+              <div className="text-gray-600">Member: {tx.loyalty_members.full_name}</div>
+              <div className="text-gray-600">ID: {tx.loyalty_members.member_code}</div>
+              <div className="font-bold text-gray-800 mt-1">Sisa Poin: {tx.loyalty_members.points} pts</div>
+            </div>
+          )}
           <div className="text-center mt-3 text-gray-400 text-xs border-t border-dashed border-gray-300 pt-2">
             Terima kasih atas kunjungan Anda!
           </div>
@@ -256,25 +266,31 @@ function AddVehicleModal({
   );
 }
 
-// ── Checkout Modal ────────────────────────────────────────────
+// ── Checkout Modal ─────────────────────────────────────────────
 function CheckoutModal({
-  open, onClose, total, subtotal, discount, onConfirm, isPending,
+  open, onClose, total, subtotal, discount, onConfirm, isPending, member
 }: {
   open: boolean;
   onClose: () => void;
   total: number;
   subtotal: number;
   discount: number;
-  onConfirm: (method: string, amountPaid: number, globalDiscount: number) => void;
+  onConfirm: (method: string, amountPaid: number, globalDiscount: number, redeemPoints: number) => void;
   isPending: boolean;
+  member: any | null;
 }) {
-  const [method, setMethod] = useState<"cash"|"transfer"|"qris"|"piutang">("cash");
+  const [method, setMethod] = useState<"cash"|"transfer"|"qris"|"piutang"|"loyalty">("cash");
   const [amountPaid, setAmountPaid] = useState("");
+  const [redeemPoints, setRedeemPoints] = useState("");
   const [globalDiscount, setGlobalDiscount] = useState(discount.toString());
 
   if (!open) return null;
 
-  const finalTotal = Math.max(0, subtotal - Number(globalDiscount || 0));
+  const finalGlobalDiscount = Number(globalDiscount || 0);
+  const pts = Number(redeemPoints || 0);
+  const pointDiscount = pts * 10000; // 1 Poin = Rp 10.000
+  const finalTotal = Math.max(0, subtotal - finalGlobalDiscount - pointDiscount);
+  
   const paid = Number(amountPaid || 0);
   const change = Math.max(0, paid - finalTotal);
   const kurang = finalTotal - paid;
@@ -293,9 +309,16 @@ function CheckoutModal({
             <div className="flex justify-between text-gray-400">
               <span>Subtotal</span><span className="text-white">{formatIDR(subtotal)}</span>
             </div>
+            
+            {/* {pointDiscount > 0 && (
+              <div className="flex justify-between text-amber-400">
+                <span>Diskon Poin ({pts} pts)</span><span>-{formatIDR(pointDiscount)}</span>
+              </div>
+            )} */}
+
             <div>
               <div className="flex justify-between text-gray-400 mb-1">
-                <span>Diskon Transaksi</span>
+                <span>Diskon Transaksi (Rp)</span>
               </div>
               <input
                 type="number" min={0} max={subtotal}
@@ -314,10 +337,10 @@ function CheckoutModal({
           {/* Metode Bayar */}
           <div>
             <label className="text-gray-400 text-xs mb-2 block">Metode Pembayaran</label>
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-5 gap-2">
               {PAYMENT_METHODS.map(({ key, label }) => (
                 <button key={key} type="button"
-                  onClick={() => setMethod(key)}
+                  onClick={() => setMethod(key as any)}
                   className={`py-2 rounded-xl text-xs font-medium border transition-colors ${
                     method === key
                       ? "border-blue-600 bg-blue-900/30 text-blue-300"
@@ -328,6 +351,25 @@ function CheckoutModal({
               ))}
             </div>
           </div>
+
+          {/* Member Point Redemption (COMING SOON) */}
+          {/* {member && member.points > 0 && (
+            <div className="bg-amber-900/20 border border-amber-800/50 rounded-xl p-3">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-amber-400 text-xs font-bold flex items-center gap-2">
+                  <CreditCard className="w-4 h-4"/> Poin Member: {member.points}
+                </span>
+                <span className="text-[10px] text-gray-400">1 Poin = Rp 10.000</span>
+              </div>
+              <input
+                type="number" min={0} max={member.points}
+                value={redeemPoints}
+                onChange={(e) => setRedeemPoints(e.target.value)}
+                placeholder="Tukar berapa poin?"
+                className="w-full bg-gray-800 border border-amber-900/50 rounded-lg px-3 py-1.5 text-white text-sm focus:outline-none focus:border-amber-600"
+              />
+            </div>
+          )} */}
 
           {/* Jumlah Bayar (hanya untuk cash) */}
           {method === "cash" && (
@@ -366,7 +408,7 @@ function CheckoutModal({
           )}
 
           <button
-            onClick={() => onConfirm(method, method === "cash" ? paid : finalTotal, Number(globalDiscount || 0))}
+            onClick={() => onConfirm(method, method === "cash" ? paid : finalTotal, Number(globalDiscount || 0), Number(redeemPoints || 0))}
             disabled={isPending || (method === "cash" && paid < finalTotal)}
             className="w-full py-3 bg-green-600 hover:bg-green-700 disabled:opacity-40 disabled:cursor-not-allowed rounded-xl text-white font-bold text-sm transition-colors">
             {isPending ? "Memproses…" : `✓ Bayar ${formatIDR(finalTotal)}`}
@@ -395,17 +437,22 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
   const [plateSearch, setPlateSearch] = useState("");
   const [vehicleResults, setVehicleResults] = useState<any[]>([]);
   const [vehicleLoading, setVehicleLoading] = useState(false);
-
-  // Staff assign modal
+  const [memberSearch, setMemberSearch] = useState("");
+  const [memberLoading, setMemberLoading] = useState(false);
   const [staffModal, setStaffModal] = useState<{ itemId: string; name: string } | null>(null);
 
   // Add vehicle modal
   const [addVehicleOpen, setAddVehicleOpen] = useState(false);
 
-  // Filter produk
+  // Filter produk (Berdasarkan Nama ATAU SKU Barcode)
   const filteredProducts = products.filter((p) => {
     if (activeTab !== "all" && p.business_unit !== activeTab) return false;
-    if (search && !p.name.toLowerCase().includes(search.toLowerCase())) return false;
+    if (search) {
+      const s = search.toLowerCase();
+      const matchName = p.name.toLowerCase().includes(s);
+      const matchSku = p.sku?.toLowerCase().includes(s);
+      if (!matchName && !matchSku) return false;
+    }
     return true;
   });
 
@@ -468,8 +515,9 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
     setCheckoutOpen(true);
   }
 
-  function handleConfirmCheckout(method: string, amountPaid: number, globalDiscount: number) {
+  function handleConfirmCheckout(method: string, amountPaid: number, globalDiscount: number, redeemPoints: number) {
     cart.setGlobalDiscount(globalDiscount);
+    cart.setRedeemedPoints(redeemPoints);
 
     startTransition(async () => {
       const res = await submitTransaction({
@@ -481,6 +529,8 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
         notes: cart.notes,
         wa_phone: cart.wa_phone,
         amount_paid: amountPaid,
+        member_id: cart.member?.id,
+        redeemed_points: redeemPoints,
         items: cart.items.map((i) => ({
           product_id: i.id,
           qty: i.qty,
@@ -503,9 +553,9 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
         toast.success("Transaksi berhasil! 🎉");
         
         // Kirim struk WA jika ada nomor
-        if (res.data?.wa_phone) {
-          sendFonnteReceipt(res.data, res.data.wa_phone);
-        }
+        // if (res.data?.wa_phone) {
+        //   sendFonnteReceipt(res.data, res.data.wa_phone);
+        // }
       }
     });
   }
@@ -536,8 +586,21 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Cari produk atau layanan…"
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg pl-9 pr-3 py-2 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-blue-600"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && filteredProducts.length === 1) {
+                  const p = filteredProducts[0];
+                  if (p.type !== "product" || p.stock_qty > 0) {
+                    cart.addItem({
+                      id: p.id, name: p.name, type: p.type,
+                      business_unit: p.business_unit, price: p.price, unit: p.unit ?? "pcs",
+                    });
+                    setSearch("");
+                  }
+                }
+              }}
+              autoFocus
+              placeholder="Cari nama atau Scan Barcode…"
+              className="w-full bg-gray-800 border border-gray-700 rounded-lg pl-9 pr-3 py-2 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-blue-600 font-mono"
             />
           </div>
         </div>
@@ -666,6 +729,11 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
           )}
         </div>
 
+        {/* Member selector (COMING SOON - HIDDEN) */}
+        {/* <div className="p-3 border-b border-gray-800">
+          ...
+        </div> */}
+
         {/* Cart items */}
         <div className="flex-1 overflow-y-auto">
           {cart.items.length === 0 ? (
@@ -696,10 +764,10 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
           <div className="px-4 py-2 border-t border-gray-800 bg-gray-900">
             <input
               type="text"
-              placeholder="No. WA Pelanggan (08... / 628...)"
+              placeholder="No. WA / HP (Opsional untuk administrasi)"
               value={cart.wa_phone}
               onChange={(e) => cart.setWaPhone(e.target.value)}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-xs placeholder-gray-500 focus:outline-none focus:border-green-600"
+              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-xs placeholder-gray-500 focus:outline-none focus:border-blue-600"
             />
           </div>
         )}
@@ -747,6 +815,7 @@ export function POSClient({ products, staff, cashierId, cashierName }: {
         discount={cart.discount}
         onConfirm={handleConfirmCheckout}
         isPending={isPending}
+        member={cart.member}
       />
 
       {/* Add Vehicle Modal */}

@@ -6,649 +6,1023 @@
 - Local:         http://localhost:3000
 - Network:       http://192.168.1.7:3000
 - Environments: .env.local
-✓ Ready in 395ms
-✓ Running next.config.ts took 34ms
+✓ Ready in 502ms
+✓ Running next.config.ts took 114ms
 
- GET /owner 200 in 1593ms (next.js: 113ms, proxy.ts: 310ms, application-code: 1170ms)
- GET /owner/reports 200 in 1256ms (next.js: 39ms, proxy.ts: 276ms, application-code: 942ms)
- GET /owner/products 200 in 993ms (next.js: 46ms, proxy.ts: 222ms, application-code: 726ms)
- GET /owner/staff 200 in 336ms (next.js: 21ms, proxy.ts: 153ms, application-code: 161ms)
- GET /owner/settings 200 in 491ms (next.js: 24ms, proxy.ts: 446ms, application-code: 21ms)
- GET /login 200 in 267ms (next.js: 19ms, proxy.ts: 157ms, application-code: 91ms)
- GET /login?email=owner%40skmotor.com&password=28Desember2004 200 in 36ms (next.js: 3ms, proxy.ts: 4ms, application-code: 29ms)
- GET /owner 200 in 1040ms (next.js: 7ms, proxy.ts: 191ms, application-code: 842ms)
-⨯ ./src/app/(dashboard)/owner/products/page.tsx:3:1
-Error: Module not found: Can't resolve '@/lib/auth'
-  [90m1 |[0m [36mimport[0m { fetchProducts, fetchCategories } [36mfrom[0m [32m"@/app/actions/products"[0m;
-  [90m2 |[0m [36mimport[0m { [33mProductsClient[0m } [36mfrom[0m [32m"./products-client"[0m;
-[31m[1m>[0m [90m3 |[0m [36mimport[0m { getCurrentUser } [36mfrom[0m [32m"@/lib/auth"[0m;
-  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
-  [90m4 |[0m [36mimport[0m { redirect } [36mfrom[0m [32m"next/navigation"[0m;
-  [90m5 |[0m
-  [90m6 |[0m [36mexport[0m [36mconst[0m metadata = { title: [32m"Manajemen Produk"[0m };
+ GET /cashier 200 in 2.1s (next.js: 114ms, proxy.ts: 301ms, application-code: 1651ms)
+ GET /owner 200 in 941ms (next.js: 21ms, proxy.ts: 145ms, application-code: 775ms)
+ GET /cashier 200 in 558ms (next.js: 3ms, proxy.ts: 140ms, application-code: 415ms)
+ GET /owner/settings 200 in 374ms (next.js: 18ms, proxy.ts: 163ms, application-code: 193ms)
+ GET /owner/products 200 in 837ms (next.js: 33ms, proxy.ts: 138ms, application-code: 666ms)
+✓ Compiled in 164ms
+ GET /owner/products 200 in 583ms (next.js: 5ms, proxy.ts: 543ms, application-code: 35ms)
+✓ Compiled in 84ms
+ GET /owner/products 200 in 285ms (next.js: 3ms, proxy.ts: 249ms, application-code: 33ms)
+ GET /owner/products 200 in 1058ms (next.js: 3ms, proxy.ts: 384ms, application-code: 671ms)
+ GET /owner/reports 200 in 1148ms (next.js: 19ms, proxy.ts: 287ms, application-code: 842ms)
+ GET /owner/products 200 in 969ms (next.js: 3ms, proxy.ts: 143ms, application-code: 823ms)
+ GET /owner/settings 200 in 414ms (next.js: 3ms, proxy.ts: 229ms, application-code: 183ms)
+✓ Compiled in 128ms
+[browser] A component is changing a controlled input to be uncontrolled. This is likely caused by the value changing from a defined to undefined, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://react.dev/link/controlled-components 
+ GET /owner/settings 200 in 302ms (next.js: 9ms, proxy.ts: 268ms, application-code: 25ms)
+ GET /cashier/vehicles 200 in 430ms (next.js: 15ms, proxy.ts: 228ms, application-code: 187ms)
+ POST /cashier/vehicles 200 in 527ms (next.js: 3ms, proxy.ts: 145ms, application-code: 379ms)
+  └─ ƒ searchVehicle("") in 367ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 326ms (next.js: 2ms, proxy.ts: 144ms, application-code: 180ms)
+  └─ ƒ searchVehicle("") in 175ms src/app/actions/vehicles.ts
+ GET /owner 200 in 819ms (next.js: 3ms, proxy.ts: 146ms, application-code: 670ms)
+✓ Compiled in 86ms
+ GET /owner 200 in 872ms (next.js: 3ms, proxy.ts: 227ms, application-code: 642ms)
+ GET /owner 200 in 726ms (next.js: 4ms, proxy.ts: 431ms, application-code: 291ms)
+ GET /owner 200 in 1392ms (next.js: 4ms, proxy.ts: 479ms, application-code: 909ms)
+✓ Compiled in 98ms
+ GET /owner 200 in 1409ms (next.js: 9ms, proxy.ts: 499ms, application-code: 901ms)
+ GET /owner 200 in 1022ms (next.js: 68ms, proxy.ts: 279ms, application-code: 674ms)
+ GET /owner 200 in 802ms (next.js: 3ms, proxy.ts: 145ms, application-code: 654ms)
+ GET /owner 200 in 765ms (next.js: 3ms, proxy.ts: 139ms, application-code: 623ms)
+ GET /owner 200 in 406ms (next.js: 3ms, proxy.ts: 136ms, application-code: 267ms)
+ GET /owner 200 in 797ms (next.js: 3ms, proxy.ts: 155ms, application-code: 639ms)
+ GET /owner 200 in 391ms (next.js: 3ms, proxy.ts: 133ms, application-code: 255ms)
+ GET /owner 200 in 784ms (next.js: 3ms, proxy.ts: 155ms, application-code: 625ms)
+ GET /owner 200 in 398ms (next.js: 3ms, proxy.ts: 138ms, application-code: 257ms)
+ GET /owner 200 in 404ms (next.js: 3ms, proxy.ts: 137ms, application-code: 264ms)
+ GET /owner 200 in 434ms (next.js: 3ms, proxy.ts: 143ms, application-code: 289ms)
+ GET /owner 200 in 359ms (next.js: 3ms, proxy.ts: 136ms, application-code: 220ms)
+ GET /owner 200 in 416ms (next.js: 7ms, proxy.ts: 144ms, application-code: 265ms)
+ GET /owner 200 in 392ms (next.js: 3ms, proxy.ts: 135ms, application-code: 254ms)
+ GET /owner 200 in 394ms (next.js: 3ms, proxy.ts: 132ms, application-code: 259ms)
+ GET /owner 200 in 755ms (next.js: 3ms, proxy.ts: 133ms, application-code: 619ms)
+ GET /owner 200 in 398ms (next.js: 2ms, proxy.ts: 140ms, application-code: 255ms)
+ GET /owner 200 in 395ms (next.js: 3ms, proxy.ts: 137ms, application-code: 255ms)
+ GET /owner 200 in 400ms (next.js: 3ms, proxy.ts: 134ms, application-code: 263ms)
+ GET /owner 200 in 438ms (next.js: 3ms, proxy.ts: 137ms, application-code: 298ms)
+ GET /owner 200 in 393ms (next.js: 3ms, proxy.ts: 138ms, application-code: 252ms)
+ GET /owner 200 in 402ms (next.js: 3ms, proxy.ts: 135ms, application-code: 264ms)
+ GET /owner 200 in 397ms (next.js: 3ms, proxy.ts: 138ms, application-code: 256ms)
+ GET /owner 200 in 344ms (next.js: 3ms, proxy.ts: 165ms, application-code: 176ms)
+ GET /owner 200 in 402ms (next.js: 3ms, proxy.ts: 140ms, application-code: 259ms)
+✓ Compiled in 97ms
+ GET /owner 200 in 530ms (next.js: 4ms, proxy.ts: 228ms, application-code: 298ms)
+ GET /owner 200 in 910ms (next.js: 3ms, proxy.ts: 250ms, application-code: 657ms)
+✓ Compiled in 117ms
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:685:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  683 |             </div>
+  684 |           )}
+> 685 |           )}
+      |            ^
+  686 |         </div>
+  687 |
+  688 |         {/* Member selector */}
 
-Import map: aliased to relative './src/lib/auth' inside of [project]/
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:685:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  683 |             </div>
+  684 |           )}
+> 685 |           )}
+      |            ^
+  686 |         </div>
+  687 |
+  688 |         {/* Member selector */}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:686:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  684 |             </div>
+  685 |           )}
+> 686 |           )}
+      |            ^
+  687 |         </div>
+  688 |
+  689 |         {/* Member selector */}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:686:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  684 |             </div>
+  685 |           )}
+> 686 |           )}
+      |            ^
+  687 |         </div>
+  688 |
+  689 |         {/* Member selector */}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/app/(dashboard)/cashier/pos-client.tsx
+    ./src/app/(dashboard)/cashier/page.tsx 
+ GET /owner 200 in 949ms (next.js: 3ms, proxy.ts: 280ms, application-code: 665ms)
+ GET /owner 200 in 955ms (next.js: 3ms, proxy.ts: 279ms, application-code: 673ms)
+ GET /owner 200 in 966ms (next.js: 5ms, proxy.ts: 279ms, application-code: 682ms)
+ GET /owner 200 in 962ms (next.js: 4ms, proxy.ts: 284ms, application-code: 675ms)
+ GET /owner 200 in 806ms (next.js: 3ms, proxy.ts: 511ms, application-code: 291ms)
+ GET /owner 200 in 576ms (next.js: 5ms, proxy.ts: 264ms, application-code: 307ms)
+✓ Compiled in 182ms
+ GET /owner 200 in 597ms (next.js: 3ms, proxy.ts: 288ms, application-code: 306ms)
+ GET /owner 200 in 912ms (next.js: 2ms, proxy.ts: 504ms, application-code: 405ms)
+ GET /owner 200 in 951ms (next.js: 3ms, proxy.ts: 271ms, application-code: 677ms)
+ GET /owner 200 in 552ms (next.js: 3ms, proxy.ts: 253ms, application-code: 296ms)
+✓ Compiled in 136ms
+ GET /owner 200 in 538ms (next.js: 4ms, proxy.ts: 243ms, application-code: 292ms)
+✓ Compiled in 110ms
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+⨯ ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  [90m77 |[0m   [90m//   roles: [ROLES.OWNER, ROLES.CASHIER],[0m
+  [90m78 |[0m   [90m// },[0m
+[31m[1m>[0m [90m79 |[0m   {
+  [90m   |[0m   [31m[1m^[0m
+  [90m80 |[0m     href: [32m"/cashier/vehicles"[0m,
+  [90m81 |[0m     label: [32m"Database Kendaraan"[0m,
+  [90m82 |[0m     icon: [33mCar[0m,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
 
 
-https://nextjs.org/docs/messages/module-not-found
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+ GET /owner 500 in 711ms (next.js: 177ms, proxy.ts: 433ms, application-code: 101ms)
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] Uncaught Error: ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
 
 
-⨯ ./src/app/(dashboard)/owner/products/page.tsx:3:1
-Error: Module not found: Can't resolve '@/lib/auth'
-  [90m1 |[0m [36mimport[0m { fetchProducts, fetchCategories } [36mfrom[0m [32m"@/app/actions/products"[0m;
-  [90m2 |[0m [36mimport[0m { [33mProductsClient[0m } [36mfrom[0m [32m"./products-client"[0m;
-[31m[1m>[0m [90m3 |[0m [36mimport[0m { getCurrentUser } [36mfrom[0m [32m"@/lib/auth"[0m;
-  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
-  [90m4 |[0m [36mimport[0m { redirect } [36mfrom[0m [32m"next/navigation"[0m;
-  [90m5 |[0m
-  [90m6 |[0m [36mexport[0m [36mconst[0m metadata = { title: [32m"Manajemen Produk"[0m };
+    at <unknown> (Error: ./src/components/layout/sidebar.tsx:79:3)
+    at <unknown> (Error: (./src/components/layout/sidebar.tsx:79:3)
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
 
-Import map: aliased to relative './src/lib/auth' inside of [project]/
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+⨯ ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  [90m77 |[0m   [90m//   roles: [ROLES.OWNER, ROLES.CASHIER],[0m
+  [90m78 |[0m   [90m// },[0m
+[31m[1m>[0m [90m79 |[0m   {
+  [90m   |[0m   [31m[1m^[0m
+  [90m80 |[0m     href: [32m"/cashier/vehicles"[0m,
+  [90m81 |[0m     label: [32m"Database Kendaraan"[0m,
+  [90m82 |[0m     icon: [33mCar[0m,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
 
 
-https://nextjs.org/docs/messages/module-not-found
+ GET /owner 500 in 163ms (next.js: 6ms, proxy.ts: 151ms, application-code: 7ms)
+[browser] Uncaught Error: ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
 
 
-[browser] ./src/app/(dashboard)/owner/products/page.tsx:3:1
-Error: Module not found: Can't resolve '@/lib/auth'
-  1 | import { fetchProducts, fetchCategories } from "@/app/actions/products";
-  2 | import { ProductsClient } from "./products-client";
-> 3 | import { getCurrentUser } from "@/lib/auth";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 | import { redirect } from "next/navigation";
-  5 |
-  6 | export const metadata = { title: "Manajemen Produk" };
+    at <unknown> (Error: ./src/components/layout/sidebar.tsx:79:3)
+    at <unknown> (Error: (./src/components/layout/sidebar.tsx:79:3)
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
 
-Import map: aliased to relative './src/lib/auth' inside of [project]/
+Parsing ecmascript source code failed
 
-https://nextjs.org/docs/messages/module-not-found 
-[browser] ./src/app/(dashboard)/owner/products/page.tsx:3:1
-Error: Module not found: Can't resolve '@/lib/auth'
-  1 | import { fetchProducts, fetchCategories } from "@/app/actions/products";
-  2 | import { ProductsClient } from "./products-client";
-> 3 | import { getCurrentUser } from "@/lib/auth";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 | import { redirect } from "next/navigation";
-  5 |
-  6 | export const metadata = { title: "Manajemen Produk" };
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
 
-Import map: aliased to relative './src/lib/auth' inside of [project]/
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
 
-https://nextjs.org/docs/messages/module-not-found 
- GET /owner 200 in 879ms (next.js: 4ms, proxy.ts: 233ms, application-code: 642ms)
- GET /owner 200 in 872ms (next.js: 10ms, proxy.ts: 220ms, application-code: 642ms)
- GET /cashier/vehicles 200 in 267ms (next.js: 21ms, proxy.ts: 229ms, application-code: 17ms)
- POST /cashier/vehicles 200 in 792ms (next.js: 3ms, proxy.ts: 143ms, application-code: 646ms)
-  └─ ƒ searchVehicle("") in 638ms src/app/actions/vehicles.ts
- POST /cashier/vehicles 200 in 758ms (next.js: 2ms, proxy.ts: 145ms, application-code: 610ms)
-  └─ ƒ searchVehicle("") in 604ms src/app/actions/vehicles.ts
- GET /owner 200 in 813ms (next.js: 4ms, proxy.ts: 152ms, application-code: 657ms)
- GET /login 200 in 21ms (next.js: 3ms, proxy.ts: 5ms, application-code: 13ms)
- GET /cashier 200 in 732ms (next.js: 20ms, proxy.ts: 222ms, application-code: 489ms)
- GET /cashier/inventory 404 in 258ms (next.js: 23ms, proxy.ts: 221ms, application-code: 14ms)
- GET /cashier/inventory 404 in 175ms (next.js: 5ms, proxy.ts: 144ms, application-code: 26ms)
- GET /cashier/vehicles 200 in 156ms (next.js: 3ms, proxy.ts: 141ms, application-code: 12ms)
- GET /cashier 200 in 557ms (next.js: 3ms, proxy.ts: 139ms, application-code: 415ms)
- GET /cashier/vehicles 200 in 159ms (next.js: 3ms, proxy.ts: 144ms, application-code: 12ms)
- POST /cashier/vehicles 200 in 413ms (next.js: 2ms, proxy.ts: 148ms, application-code: 263ms)
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+⨯ ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  [90m77 |[0m   [90m//   roles: [ROLES.OWNER, ROLES.CASHIER],[0m
+  [90m78 |[0m   [90m// },[0m
+[31m[1m>[0m [90m79 |[0m   {
+  [90m   |[0m   [31m[1m^[0m
+  [90m80 |[0m     href: [32m"/cashier/vehicles"[0m,
+  [90m81 |[0m     label: [32m"Database Kendaraan"[0m,
+  [90m82 |[0m     icon: [33mCar[0m,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+
+ GET /cashier 500 in 154ms (next.js: 11ms, proxy.ts: 136ms, application-code: 6ms)
+[browser] Uncaught Error: ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/layout/sidebar.tsx:79:3)
+    at <unknown> (Error: (./src/components/layout/sidebar.tsx:79:3)
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+[browser] ./src/components/layout/sidebar.tsx:79:3
+Error: Unexpected token `{`. Expected identifier, string literal, numeric literal or [ for the computed key
+  77 |   //   roles: [ROLES.OWNER, ROLES.CASHIER],
+  78 |   // },
+> 79 |   {
+     |   ^
+  80 |     href: "/cashier/vehicles",
+  81 |     label: "Database Kendaraan",
+  82 |     icon: Car,
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/sidebar.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Client Component Browser]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/sidebar.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Client Component SSR]
+    ./src/components/layout/dashboard-shell.tsx [Server Component]
+    ./src/app/(dashboard)/layout.tsx [Server Component] 
+ GET /cashier 200 in 941ms (next.js: 20ms, proxy.ts: 226ms, application-code: 696ms)
+ GET /owner/products 200 in 1188ms (next.js: 35ms, proxy.ts: 261ms, application-code: 892ms)
+ GET /owner/reports 200 in 1032ms (next.js: 10ms, proxy.ts: 226ms, application-code: 796ms)
+ GET /cashier/vehicles 200 in 338ms (next.js: 10ms, proxy.ts: 141ms, application-code: 187ms)
+ POST /cashier/vehicles 200 in 405ms (next.js: 2ms, proxy.ts: 139ms, application-code: 263ms)
   └─ ƒ searchVehicle("") in 256ms src/app/actions/vehicles.ts
- POST /cashier/vehicles 200 in 400ms (next.js: 4ms, proxy.ts: 146ms, application-code: 250ms)
-  └─ ƒ searchVehicle("") in 245ms src/app/actions/vehicles.ts
- GET /cashier 200 in 533ms (next.js: 3ms, proxy.ts: 139ms, application-code: 391ms)
- GET /cashier 200 in 1091ms (next.js: 2ms, proxy.ts: 239ms, application-code: 850ms)
- GET /cashier 307 in 155ms (proxy.ts: 150ms)
- GET /cashier 200 in 157ms (next.js: 3ms, proxy.ts: 150ms, application-code: 4ms)
- GET /cashier 200 in 633ms (next.js: 2ms, proxy.ts: 150ms, application-code: 480ms)
- GET /cashier 307 in 144ms (proxy.ts: 141ms)
- GET /cashier 200 in 154ms (next.js: 3ms, proxy.ts: 146ms, application-code: 4ms)
- GET /cashier 307 in 146ms (proxy.ts: 143ms)
- GET /cashier 200 in 150ms (next.js: 3ms, proxy.ts: 143ms, application-code: 4ms)
- GET /cashier/inventory 404 in 163ms (next.js: 6ms, proxy.ts: 145ms, application-code: 12ms)
- GET /cashier/inventory 404 in 191ms (next.js: 6ms, proxy.ts: 154ms, application-code: 31ms)
- GET /cashier/vehicles 200 in 155ms (next.js: 3ms, proxy.ts: 141ms, application-code: 11ms)
- GET /cashier/vehicles 200 in 172ms (next.js: 3ms, proxy.ts: 153ms, application-code: 16ms)
- GET /cashier/vehicles 200 in 161ms (next.js: 3ms, proxy.ts: 143ms, application-code: 15ms)
- GET /cashier 307 in 149ms (proxy.ts: 146ms)
- GET /cashier 200 in 943ms (next.js: 4ms, proxy.ts: 145ms, application-code: 793ms)
- GET /cashier 200 in 1050ms (next.js: 3ms, proxy.ts: 228ms, application-code: 820ms)
- GET /cashier 307 in 145ms (proxy.ts: 142ms)
- GET /cashier 200 in 153ms (next.js: 5ms, proxy.ts: 143ms, application-code: 5ms)
- GET /cashier 200 in 579ms (next.js: 2ms, proxy.ts: 138ms, application-code: 439ms)
- GET /cashier 307 in 155ms (proxy.ts: 151ms)
- GET /cashier 200 in 152ms (next.js: 5ms, proxy.ts: 142ms, application-code: 5ms)
- GET /login 200 in 21ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
- GET /cashier 200 in 702ms (next.js: 4ms, proxy.ts: 142ms, application-code: 557ms)
- GET /cashier/vehicles 200 in 172ms (next.js: 3ms, proxy.ts: 158ms, application-code: 12ms)
- POST /cashier/vehicles 200 in 394ms (next.js: 3ms, proxy.ts: 147ms, application-code: 245ms)
-  └─ ƒ searchVehicle("") in 239ms src/app/actions/vehicles.ts
- POST /cashier/vehicles 200 in 756ms (next.js: 3ms, proxy.ts: 144ms, application-code: 609ms)
-  └─ ƒ searchVehicle("") in 603ms src/app/actions/vehicles.ts
- GET /cashier/inventory 404 in 170ms (next.js: 5ms, proxy.ts: 138ms, application-code: 27ms)
- GET /cashier/inventory 404 in 174ms (next.js: 5ms, proxy.ts: 147ms, application-code: 22ms)
- GET /cashier 307 in 153ms (proxy.ts: 149ms)
- GET /cashier 200 in 563ms (next.js: 3ms, proxy.ts: 147ms, application-code: 413ms)
- GET /cashier 200 in 1272ms (next.js: 3ms, proxy.ts: 424ms, application-code: 845ms)
- GET /cashier 307 in 139ms (proxy.ts: 136ms)
- GET /cashier 200 in 153ms (next.js: 4ms, proxy.ts: 140ms, application-code: 9ms)
- GET /cashier 200 in 1135ms (next.js: 3ms, proxy.ts: 228ms, application-code: 904ms)
- GET /cashier 307 in 148ms (proxy.ts: 144ms)
- GET /cashier 200 in 150ms (next.js: 2ms, proxy.ts: 143ms, application-code: 5ms)
- POST /cashier 200 in 498ms (next.js: 4ms, proxy.ts: 221ms, application-code: 273ms)
-  └─ ƒ submitTransaction({"amount_paid":500000,"cashier_id":"dd43c46e-d096-4699-9bf0-010f21eac1a6","discount":0,"...":"6 items not stringified"}) in 267ms src/app/actions/pos.ts
- POST /cashier 200 in 839ms (next.js: 10ms, proxy.ts: 212ms, application-code: 617ms)
-  └─ ƒ submitTransaction({"amount_paid":500000,"cashier_id":"dd43c46e-d096-4699-9bf0-010f21eac1a6","discount":0,"...":"6 items not stringified"}) in 611ms src/app/actions/pos.ts
- GET /cashier 200 in 868ms (next.js: 3ms, proxy.ts: 391ms, application-code: 474ms)
- POST /cashier 200 in 2.1s (next.js: 2ms, proxy.ts: 223ms, application-code: 1841ms)
-  └─ ƒ submitTransaction({"amount_paid":602000,"cashier_id":"dd43c46e-d096-4699-9bf0-010f21eac1a6","discount":0,"...":"6 items not stringified"}) in 1068ms src/app/actions/pos.ts
- GET /cashier 307 in 156ms (proxy.ts: 152ms)
- GET /cashier 200 in 146ms (next.js: 4ms, proxy.ts: 138ms, application-code: 4ms)
- GET /cashier/vehicles 200 in 166ms (next.js: 3ms, proxy.ts: 151ms, application-code: 12ms)
- POST /cashier/vehicles 200 in 412ms (next.js: 3ms, proxy.ts: 140ms, application-code: 268ms)
-  └─ ƒ searchVehicle("") in 262ms src/app/actions/vehicles.ts
- POST /cashier/vehicles 200 in 767ms (next.js: 3ms, proxy.ts: 139ms, application-code: 624ms)
-  └─ ƒ searchVehicle("") in 620ms src/app/actions/vehicles.ts
- GET /cashier 307 in 164ms (proxy.ts: 159ms)
- GET /cashier 200 in 582ms (next.js: 3ms, proxy.ts: 139ms, application-code: 441ms)
- GET /cashier 200 in 145ms (next.js: 4ms, proxy.ts: 137ms, application-code: 4ms)
- GET /cashier 200 in 899ms (next.js: 3ms, proxy.ts: 140ms, application-code: 756ms)
-✓ Compiled in 91ms
- GET /cashier 200 in 512ms (next.js: 12ms, proxy.ts: 460ms, application-code: 40ms)
- GET /login 200 in 19ms (next.js: 3ms, proxy.ts: 3ms, application-code: 13ms)
- GET /owner 200 in 873ms (next.js: 4ms, proxy.ts: 221ms, application-code: 647ms)
-✓ Compiled in 57ms
- GET /owner 200 in 410ms (next.js: 2ms, proxy.ts: 148ms, application-code: 259ms)
- GET /cashier 200 in 681ms (next.js: 74ms, proxy.ts: 192ms, application-code: 414ms)
-[browser] Uncaught ReferenceError: handlePayClick is not defined
-    at POSClient (src/app/(dashboard)/cashier/pos-client.tsx:620:32)
-    at CashierPOSPage (src\app\(dashboard)\cashier\page.tsx:17:5)
-  618 |                 <Trash2 className="w-4 h-4" />
-  619 |               </button>
-> 620 |               <button onClick={handlePayClick}
-      |                                ^
-  621 |                 className="flex-1 py-2.5 bg-green-600 hover:bg-green-700 rounded-xl text-white font-bold text-sm transition-colors flex items-center justify-center gap-2">
-  622 |                 <ShoppingCart className="w-4 h-4" /> Bayar
-  623 |               </button>
-⚠ Fast Refresh had to perform a full reload due to a runtime error.
-✓ Compiled in 63ms
- GET /owner 200 in 572ms (next.js: 3ms, proxy.ts: 218ms, application-code: 351ms)
- GET /owner 200 in 1412ms (next.js: 3ms, proxy.ts: 491ms, application-code: 918ms)
- GET /cashier 200 in 541ms (next.js: 7ms, proxy.ts: 137ms, application-code: 396ms)
-✓ Compiled in 157ms
- GET /cashier 200 in 524ms (next.js: 12ms, proxy.ts: 479ms, application-code: 33ms)
- GET /cashier 200 in 272ms (next.js: 10ms, proxy.ts: 229ms, application-code: 33ms)
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
-⨯ ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  [90m662 |[0m               </button>
-  [90m663 |[0m             </div>
-[31m[1m>[0m [90m664 |[0m           )}
-  [90m    |[0m            [31m[1m^[0m
-  [90m665 |[0m           {vehicleResults.length > [35m0[0m && !cart.vehicle && (
-  [90m666 |[0m             <div className=[32m"mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...[0m
-  [90m667 |[0m               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx
-
-
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
- GET /cashier 500 in 737ms (next.js: 180ms, proxy.ts: 440ms, application-code: 117ms)
-[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx
-
-
-    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
- GET /owner 500 in 158ms (next.js: 5ms, proxy.ts: 145ms, application-code: 7ms)
- GET /owner 500 in 165ms (next.js: 5ms, proxy.ts: 154ms, application-code: 6ms)
-[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx
-
-
-    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
- GET /owner 500 in 228ms (next.js: 4ms, proxy.ts: 218ms, application-code: 6ms)
-[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx
-
-
-    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
- GET /owner 500 in 158ms (next.js: 5ms, proxy.ts: 148ms, application-code: 6ms)
-[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx
-
-
-    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
- GET /owner 500 in 147ms (next.js: 5ms, proxy.ts: 135ms, application-code: 7ms)
-[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx
-
-
-    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
- GET /owner 500 in 152ms (next.js: 5ms, proxy.ts: 141ms, application-code: 7ms)
-[browser] Uncaught Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx
-
-
-    at <unknown> (Error: ./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-    at <unknown> (Error: (./src/app/(dashboard)/cashier/pos-client.tsx:664:12)
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
-[browser] ./src/app/(dashboard)/cashier/pos-client.tsx:664:12
-Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-  662 |               </button>
-  663 |             </div>
-> 664 |           )}
-      |            ^
-  665 |           {vehicleResults.length > 0 && !cart.vehicle && (
-  666 |             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-xl overflow-h...
-  667 |               {vehicleResults.map((v) => {
-
-Parsing ecmascript source code failed
-
-Import trace:
-  Server Component:
-    ./src/app/(dashboard)/cashier/pos-client.tsx
-    ./src/app/(dashboard)/cashier/page.tsx 
- GET /owner 200 in 1191ms (next.js: 3ms, proxy.ts: 241ms, application-code: 947ms)
- GET /cashier 200 in 1016ms (next.js: 12ms, proxy.ts: 226ms, application-code: 777ms)
- POST /cashier 200 in 1328ms (next.js: 3ms, proxy.ts: 223ms, application-code: 1101ms)
-  └─ ƒ createVehicle({"brand":"Honda","color":"Putih","license_plate":"F 2004 jo","...":"4 items not stringified"}) in 667ms src/app/actions/vehicles.ts
- GET /cashier/vehicles 200 in 253ms (next.js: 3ms, proxy.ts: 235ms, application-code: 15ms)
- POST /cashier/vehicles 200 in 784ms (next.js: 3ms, proxy.ts: 141ms, application-code: 640ms)
-  └─ ƒ searchVehicle("") in 634ms src/app/actions/vehicles.ts
- POST /cashier/vehicles 200 in 759ms (next.js: 3ms, proxy.ts: 139ms, application-code: 618ms)
-  └─ ƒ searchVehicle("") in 612ms src/app/actions/vehicles.ts
- GET /owner/staff 200 in 404ms (next.js: 9ms, proxy.ts: 136ms, application-code: 259ms)
- GET /cashier/vehicles 200 in 234ms (next.js: 3ms, proxy.ts: 215ms, application-code: 16ms)
- POST /cashier/vehicles 200 in 784ms (next.js: 3ms, proxy.ts: 141ms, application-code: 641ms)
-  └─ ƒ searchVehicle("") in 634ms src/app/actions/vehicles.ts
- POST /cashier/vehicles 200 in 770ms (next.js: 3ms, proxy.ts: 141ms, application-code: 625ms)
-  └─ ƒ searchVehicle("") in 620ms src/app/actions/vehicles.ts
- GET /owner/settings 200 in 269ms (next.js: 10ms, proxy.ts: 240ms, application-code: 18ms)
- GET /cashier 200 in 605ms (next.js: 3ms, proxy.ts: 151ms, application-code: 451ms)
- GET /cashier 200 in 156ms (next.js: 3ms, proxy.ts: 149ms, application-code: 3ms)
- GET /cashier 200 in 598ms (next.js: 2ms, proxy.ts: 144ms, application-code: 451ms)
- GET /cashier 200 in 462ms (next.js: 9ms, proxy.ts: 422ms, application-code: 31ms)
-✓ Compiled in 130ms
- GET /cashier 200 in 272ms (next.js: 10ms, proxy.ts: 229ms, application-code: 33ms)
- GET /cashier 200 in 1082ms (next.js: 3ms, proxy.ts: 242ms, application-code: 838ms)
- POST /cashier 200 in 1804ms (next.js: 7ms, proxy.ts: 220ms, application-code: 1577ms)
-  └─ ƒ submitTransaction({"amount_paid":540000,"cashier_id":"cc1b79aa-920c-453e-9b41-1895abcdd3d8","discount":0,"...":"6 items not stringified"}) in 1169ms src/app/actions/pos.ts
- GET /cashier/vehicles 200 in 676ms (next.js: 4ms, proxy.ts: 655ms, application-code: 17ms)
- POST /cashier/vehicles 200 in 844ms (next.js: 3ms, proxy.ts: 137ms, application-code: 703ms)
-  └─ ƒ searchVehicle("") in 698ms src/app/actions/vehicles.ts
- POST /cashier/vehicles 200 in 766ms (next.js: 3ms, proxy.ts: 152ms, application-code: 611ms)
-  └─ ƒ searchVehicle("") in 605ms src/app/actions/vehicles.ts
- POST /cashier/vehicles 200 in 411ms (next.js: 3ms, proxy.ts: 140ms, application-code: 269ms)
-  └─ ƒ fetchVehicleHistory("DSADA") in 264ms src/app/actions/vehicles.ts
- GET /cashier 200 in 569ms (next.js: 3ms, proxy.ts: 139ms, application-code: 427ms)
- GET /cashier/vehicles 200 in 156ms (next.js: 4ms, proxy.ts: 140ms, application-code: 13ms)
- POST /cashier/vehicles 200 in 383ms (next.js: 2ms, proxy.ts: 142ms, application-code: 239ms)
-  └─ ƒ searchVehicle("") in 232ms src/app/actions/vehicles.ts
- POST /cashier/vehicles 200 in 367ms (next.js: 3ms, proxy.ts: 137ms, application-code: 227ms)
-  └─ ƒ searchVehicle("") in 222ms src/app/actions/vehicles.ts
- POST /cashier/vehicles 200 in 378ms (next.js: 2ms, proxy.ts: 141ms, application-code: 235ms)
-  └─ ƒ fetchVehicleHistory("F 2004 JO") in 230ms src/app/actions/vehicles.ts
- GET /owner/staff 200 in 485ms (next.js: 3ms, proxy.ts: 218ms, application-code: 263ms)
- GET /owner/reports 200 in 1018ms (next.js: 8ms, proxy.ts: 235ms, application-code: 775ms)
- GET /owner/products 200 in 690ms (next.js: 11ms, proxy.ts: 247ms, application-code: 432ms)
- GET /owner/staff 200 in 416ms (next.js: 4ms, proxy.ts: 222ms, application-code: 189ms)
- GET /owner/reports 200 in 968ms (next.js: 2ms, proxy.ts: 151ms, application-code: 814ms)
- GET /login 200 in 19ms (next.js: 4ms, proxy.ts: 3ms, application-code: 12ms)
- GET /cashier 200 in 636ms (next.js: 4ms, proxy.ts: 221ms, application-code: 411ms)
- GET /cashier/vehicles 200 in 152ms (next.js: 3ms, proxy.ts: 137ms, application-code: 13ms)
- POST /cashier/vehicles 200 in 405ms (next.js: 2ms, proxy.ts: 153ms, application-code: 250ms)
-  └─ ƒ searchVehicle("") in 245ms src/app/actions/vehicles.ts
- GET /cashier/inventory 404 in 167ms (next.js: 8ms, proxy.ts: 142ms, application-code: 18ms)
- GET /cashier/inventory 404 in 171ms (next.js: 6ms, proxy.ts: 142ms, application-code: 24ms)
- POST /cashier/vehicles 200 in 731ms (next.js: 3ms, proxy.ts: 137ms, application-code: 591ms)
-  └─ ƒ searchVehicle("") in 586ms src/app/actions/vehicles.ts
- GET /login 200 in 19ms (next.js: 2ms, proxy.ts: 5ms, application-code: 12ms)
- GET /owner 200 in 1187ms (next.js: 3ms, proxy.ts: 231ms, application-code: 953ms)
- GET /owner/staff 200 in 498ms (next.js: 3ms, proxy.ts: 235ms, application-code: 260ms)
-✓ Compiled in 74ms
- GET /owner/staff 200 in 502ms (next.js: 9ms, proxy.ts: 467ms, application-code: 26ms)
+ POST /cashier/vehicles 200 in 395ms (next.js: 3ms, proxy.ts: 164ms, application-code: 228ms)
+  └─ ƒ searchVehicle("") in 224ms src/app/actions/vehicles.ts
+ GET /owner/reports 200 in 941ms (next.js: 4ms, proxy.ts: 145ms, application-code: 792ms)
+ GET /owner 200 in 854ms (next.js: 7ms, proxy.ts: 141ms, application-code: 707ms)
+ GET /cashier 200 in 1084ms (next.js: 6ms, proxy.ts: 252ms, application-code: 825ms)
+ POST /cashier 200 in 807ms (next.js: 3ms, proxy.ts: 547ms, application-code: 258ms)
+  └─ ƒ submitTransaction({"amount_paid":580000,"cashier_id":"dd43c46e-d096-4699-9bf0-010f21eac1a6","discount":0,"...":"7 items not stringified"}) in 251ms src/app/actions/pos.ts
+✓ Compiled in 70ms
+ GET /cashier 200 in 271ms (next.js: 9ms, proxy.ts: 232ms, application-code: 29ms)
+ POST /cashier 200 in 2.2s (next.js: 3ms, proxy.ts: 249ms, application-code: 1996ms)
+  └─ ƒ submitTransaction({"amount_paid":580000,"cashier_id":"dd43c46e-d096-4699-9bf0-010f21eac1a6","discount":0,"...":"7 items not stringified"}) in 1206ms src/app/actions/pos.ts
+ GET /owner 200 in 925ms (next.js: 3ms, proxy.ts: 229ms, application-code: 693ms)
+ GET /owner/reports 200 in 1192ms (next.js: 6ms, proxy.ts: 318ms, application-code: 868ms)
+ GET /cashier 200 in 1073ms (next.js: 2ms, proxy.ts: 250ms, application-code: 821ms)
+ POST /cashier 200 in 1483ms (next.js: 3ms, proxy.ts: 251ms, application-code: 1229ms)
+  └─ ƒ submitTransaction({"amount_paid":1945000,"cashier_id":"dd43c46e-d096-4699-9bf0-010f21eac1a6","discount":0,"...":"7 items not stringified"}) in 779ms src/app/actions/pos.ts
+✓ Compiled in 88ms
+ GET /cashier 200 in 283ms (next.js: 4ms, proxy.ts: 248ms, application-code: 31ms)
+✓ Compiled in 136ms
+ GET /cashier 200 in 502ms (next.js: 3ms, proxy.ts: 468ms, application-code: 31ms)
+✓ Compiled in 99ms
+ GET /cashier 200 in 294ms (next.js: 9ms, proxy.ts: 250ms, application-code: 35ms)
+ GET /owner/reports 200 in 934ms (next.js: 8ms, proxy.ts: 429ms, application-code: 497ms)
+ POST /owner/reports 200 in 1260ms (next.js: 3ms, proxy.ts: 231ms, application-code: 1027ms)
+  └─ ƒ voidTransactionAction("0b5b2df7-dfa9-4830-b960-198c523a1efc", "salah\n", "dd43c46e-d096-4699-9bf0-010f21eac1a6") in 255ms src/app/actions/reports.ts
+ POST /owner/reports 200 in 792ms (next.js: 2ms, proxy.ts: 143ms, application-code: 646ms)
+  └─ ƒ voidTransactionAction("f0800e01-6128-463b-94f0-0720858196a2", "salah", "dd43c46e-d096-4699-9bf0-010f21eac1a6") in 235ms src/app/actions/reports.ts
+ GET /owner/products 200 in 1051ms (next.js: 3ms, proxy.ts: 472ms, application-code: 575ms)
+ GET /cashier 200 in 780ms (next.js: 5ms, proxy.ts: 293ms, application-code: 482ms)
+ GET /cashier/vehicles 200 in 664ms (next.js: 3ms, proxy.ts: 450ms, application-code: 211ms)
+ POST /cashier/vehicles 200 in 1273ms (next.js: 2ms, proxy.ts: 188ms, application-code: 1083ms)
+  └─ ƒ searchVehicle("") in 1078ms src/app/actions/vehicles.ts
+ POST /cashier/vehicles 200 in 349ms (next.js: 3ms, proxy.ts: 159ms, application-code: 187ms)
+  └─ ƒ searchVehicle("") in 181ms src/app/actions/vehicles.ts
+ GET /owner 200 in 1151ms (next.js: 3ms, proxy.ts: 210ms, application-code: 938ms)
+ GET /owner/reports 200 in 785ms (next.js: 3ms, proxy.ts: 242ms, application-code: 540ms)
+ GET /owner/products 200 in 745ms (next.js: 2ms, proxy.ts: 207ms, application-code: 535ms)
+ GET /cashier 200 in 673ms (next.js: 2ms, proxy.ts: 154ms, application-code: 517ms)
+ POST /cashier 200 in 2.5s (next.js: 3ms, proxy.ts: 427ms, application-code: 2.0s)
+  └─ ƒ submitTransaction({"amount_paid":935000,"cashier_id":"dd43c46e-d096-4699-9bf0-010f21eac1a6","discount":0,"...":"7 items not stringified"}) in 1269ms src/app/actions/pos.ts

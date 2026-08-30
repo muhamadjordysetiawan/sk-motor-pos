@@ -147,48 +147,34 @@ export default function SettingsPage() {
       {/* ── WhatsApp API ───────────────────────────────────── */}
       <Section title="Integrasi WhatsApp (Fonnte)" icon={MessageCircle}>
         <div className="space-y-4">
-          <div className="bg-blue-900/20 border border-blue-800/30 rounded-xl p-4 text-sm">
-            <div className="flex items-start gap-2">
-              <Info className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-              <div className="text-blue-300 text-xs space-y-1">
-                <p>Gunakan <strong>Fonnte</strong> untuk kirim struk otomatis ke WhatsApp pelanggan.</p>
-                <p>Daftar di <strong className="text-blue-200">fonnte.com</strong> → ambil API Key → isi di bawah.</p>
-                <p className="text-blue-400">Tanpa API key, struk tetap bisa dikirim manual via link WA.</p>
+          <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 text-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 bg-amber-500 text-black text-[10px] font-bold px-2 py-1 rounded-bl-lg">
+              SEGERA HADIR
+            </div>
+            <div className="flex items-start gap-2 opacity-50">
+              <Info className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
+              <div className="text-gray-400 text-xs space-y-1">
+                <p>Fitur <strong>Kirim Struk Otomatis (E-Receipt WhatsApp)</strong> saat ini sedang dalam tahap pengembangan.</p>
+                <p>Nantinya, tagihan pelanggan akan langsung dikirim ke WhatsApp mereka secara otomatis.</p>
               </div>
             </div>
           </div>
 
-          <Field label="Fonnte API Key" hint="Dari dashboard fonnte.com → Device → Token">
-            <div className="relative">
-              <input
-                type={showKey ? "text" : "password"}
-                value={form.wa_api_key}
-                onChange={(e) => set("wa_api_key", e.target.value)}
-                placeholder="Paste API key di sini…"
-                className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 pr-10 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-blue-600"
-              />
-              <button onClick={() => setShowKey(!showKey)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white">
-                {showKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-              </button>
-            </div>
-          </Field>
-
-          <Field label="Nomor WA Pengirim" hint="Format: 628xxxxxxxxxx (no +, no spasi). Harus terdaftar di Fonnte.">
+          <Field label="Fonnte API Key" hint="Fitur masih dikembangkan.">
             <input
-              value={form.wa_sender}
-              onChange={(e) => set("wa_sender", e.target.value)}
-              placeholder="628123456789"
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-blue-600"
+              disabled
+              placeholder="API Key..."
+              className="w-full bg-gray-900 border border-gray-800 rounded-lg px-3 py-2 text-gray-500 text-sm cursor-not-allowed"
             />
           </Field>
 
-          {form.wa_api_key && (
-            <div className="flex items-center gap-2 text-green-400 text-xs">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>API Key terisi — struk akan otomatis terkirim ke WA pelanggan</span>
-            </div>
-          )}
+          <Field label="Nomor WA Pengirim" hint="Fitur masih dikembangkan.">
+            <input
+              disabled
+              placeholder="628123456789"
+              className="w-full bg-gray-900 border border-gray-800 rounded-lg px-3 py-2 text-gray-500 text-sm cursor-not-allowed"
+            />
+          </Field>
         </div>
       </Section>
 

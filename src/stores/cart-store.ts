@@ -24,13 +24,22 @@ export interface CartVehicle {
   vehicle_type: string;
 }
 
+export interface CartMember {
+  id: string;
+  member_code: string;
+  full_name: string;
+  points: number;
+}
+
 interface CartState {
   items: CartItem[];
   vehicle: CartVehicle | null;
+  member: CartMember | null;
   discount: number;     // diskon global transaksi
   tax: number;          // pajak (0 by default)
   notes: string;
   wa_phone: string;
+  redeemed_points: number;
 
   // Computed
   subtotal: number;
@@ -51,6 +60,8 @@ interface CartState {
   updateNotes: (productId: string, notes: string) => void;
   assignStaff: (productId: string, staffId: string | null, staffName: string | null) => void;
   setVehicle: (vehicle: CartVehicle | null) => void;
+  setMember: (member: CartMember | null) => void;
+  setRedeemedPoints: (pts: number) => void;
   setGlobalDiscount: (discount: number) => void;
   setNotes: (notes: string) => void;
   setWaPhone: (phone: string) => void;
@@ -64,10 +75,12 @@ function calcSubtotal(items: CartItem[]) {
 export const useCartStore = create<CartState>((set, get) => ({
   items: [],
   vehicle: null,
+  member: null,
   discount: 0,
   tax: 0,
   notes: "",
   wa_phone: "",
+  redeemed_points: 0,
   subtotal: 0,
   total: 0,
 
@@ -158,9 +171,9 @@ export const useCartStore = create<CartState>((set, get) => ({
     }));
   },
 
-  setVehicle(vehicle) {
-    set({ vehicle });
-  },
+  setVehicle(vehicle) { set({ vehicle }); },
+  setMember(member) { set({ member }); },
+  setRedeemedPoints(redeemed_points) { set({ redeemed_points }); },
 
   setGlobalDiscount(discount) {
     set((state) => {
@@ -173,6 +186,6 @@ export const useCartStore = create<CartState>((set, get) => ({
   setWaPhone(wa_phone) { set({ wa_phone }); },
 
   clearCart() {
-    set({ items: [], vehicle: null, discount: 0, tax: 0, notes: "", wa_phone: "", subtotal: 0, total: 0 });
+    set({ items: [], vehicle: null, member: null, redeemed_points: 0, discount: 0, tax: 0, notes: "", wa_phone: "", subtotal: 0, total: 0 });
   },
 }));

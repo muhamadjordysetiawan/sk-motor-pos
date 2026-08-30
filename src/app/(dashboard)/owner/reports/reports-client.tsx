@@ -12,7 +12,7 @@ import { formatIDR } from "@/lib/constants";
 import {
   TrendingUp, Wrench, Droplets, Coffee, ReceiptText,
   ChevronDown, ChevronUp, X, AlertTriangle, Plus,
-  ArrowDownCircle, ArrowUpCircle, Scale,
+  ArrowDownCircle, ArrowUpCircle, Scale, Tag
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -396,21 +396,23 @@ export function ReportsClient({
       </div>
 
       {/* Summary Cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
         {[
-          { label: "Total Pemasukan", value: summary.total, icon: ArrowUpCircle, color: "text-green-400", bg: "bg-green-900/20", border: "border-green-800/30" },
-          { label: "Bengkel", value: summary.repair, icon: Wrench, color: "text-orange-400", bg: "bg-orange-900/20", border: "border-orange-800/30" },
-          { label: "Steam", value: summary.wash, icon: Droplets, color: "text-cyan-400", bg: "bg-cyan-900/20", border: "border-cyan-800/30" },
-          { label: "Cafe", value: summary.cafe, icon: Coffee, color: "text-amber-400", bg: "bg-amber-900/20", border: "border-amber-800/30" },
-          { label: "Total Pengeluaran", value: totalExpenses, icon: ArrowDownCircle, color: "text-red-400", bg: "bg-red-900/20", border: "border-red-800/30" },
+          { label: "Pemasukan Bersih", value: summary.total, icon: ArrowUpCircle, color: "text-green-400", bg: "bg-green-900/20", border: "border-green-800/30" },
           { label: "Laba Kotor", value: labaKotor, icon: Scale, color: labaKotor >= 0 ? "text-purple-400" : "text-red-400", bg: labaKotor >= 0 ? "bg-purple-900/20" : "bg-red-900/20", border: labaKotor >= 0 ? "border-purple-800/30" : "border-red-800/30" },
-        ].map(({ label, value, icon: Icon, color, bg, border }) => (
+          { label: "Diskon Transaksi", value: summary.discount, icon: Tag, color: "text-red-400", bg: "bg-red-900/20", border: "border-red-800/30" },
+          { label: "Total Pengeluaran", value: totalExpenses, icon: ArrowDownCircle, color: "text-red-400", bg: "bg-red-900/20", border: "border-red-800/30" },
+          { label: "Gross Bengkel", value: summary.repair, icon: Wrench, color: "text-orange-400", bg: "bg-orange-900/20", border: "border-orange-800/30" },
+          { label: "Gross Steam", value: summary.wash, icon: Droplets, color: "text-cyan-400", bg: "bg-cyan-900/20", border: "border-cyan-800/30" },
+          { label: "Gross Cafe", value: summary.cafe, icon: Coffee, color: "text-amber-400", bg: "bg-amber-900/20", border: "border-amber-800/30" },
+          { label: "Transaksi", value: summary.count, icon: ReceiptText, color: "text-blue-400", bg: "bg-blue-900/20", border: "border-blue-800/30", isFormat: false },
+        ].map(({ label, value, icon: Icon, color, bg, border, isFormat = true }) => (
           <div key={label} className={`p-4 rounded-2xl border ${border} ${bg}`}>
             <div className="flex items-center gap-2 mb-2">
               <Icon className={`w-4 h-4 ${color}`} />
               <span className="text-gray-400 text-xs">{label}</span>
             </div>
-            <div className={`text-base font-bold ${color}`}>{formatIDR(value)}</div>
+            <div className={`text-base font-bold ${color}`}>{isFormat ? formatIDR(value) : value}</div>
           </div>
         ))}
       </div>
